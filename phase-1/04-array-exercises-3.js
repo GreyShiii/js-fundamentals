@@ -5,3 +5,9 @@
 // 4. Use join() to combine back with " | " separator
 // 5. Log the result
 // Example output: "LAPTOP | MOUSE | KEYBOARD | MONITOR"
+
+const string = "laptop,mouse,keyboard,monitor";
+const splittedString = string.split(",");
+const mappingSplitted = splittedString.map((split) => split.toUpperCase());
+const backToString = mappingSplitted.join(" | ");
+console.log(backToString);
