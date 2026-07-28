@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Basics - Phase 2.1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DOM Basics - Phase 2.1</h1>
+        
+        <!-- 1. SELECT ELEMENTS -->
+        <section>
+            <h2>1. Selecting Elements</h2>
+            <p id="message">This is a message</p>
+            <button id="changeTextBtn">Change Text</button>
+        </section>
+
+        <!-- 2. MODIFY CONTENT -->
+        <section>
+            <h2>2. Modify Content</h2>
+            <div id="productInfo">Product: None Selected</div>
+            <button id="selectProductBtn">Select Laptop</button>
+        </section>
+
+        <!-- 3. SHOW/HIDE ELEMENTS -->
+        <section>
+            <h2>3. Show/Hide Elements</h2>
+            <div id="secretMessage" class="hidden">
+                <p>This is a secret message!</p>
+            </div>
+            <button id="toggleBtn">Show Secret</button>
+        </section>
+
+        <!-- 4. LIST OF PRODUCTS -->
+        <section>
+            <h2>4. Product List</h2>
+            <div id="productList">
+                <div class="product" id="product1">Laptop - $50000</div>
+                <div class="product" id="product2">Mouse - $500</div>
+                <div class="product" id="product3">Keyboard - $2000</div>
+            </div>
+        </section>
+    </div>
+
+    <script src="01-dom-basics.js"></script>
+</body>
+</html>
