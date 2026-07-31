@@ -4,3 +4,16 @@
 // Log: "Clicked: [button text]"
 // Update a div to show: "Selected: [button text]"
 // Hint: Store the button elements in a variable, add ONE listener to each, use event.target.textContent to get the button's text.
+
+const productBtn = document.querySelectorAll(".product");
+const result = document.getElementById("result");
+
+productBtn.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+        const selectedProduct = event.target.textContent;
+
+        console.log(`Selected: ${selectedProduct}`);
+        result.textContent = `Selected: ${selectedProduct}`;
+        
+    })
+})
