@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling - Phase 2.2</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        input {
+            padding: 8px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #output {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+        }
+        .cart-item {
+            padding: 10px;
+            background: #f9f9f9;
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .search-result {
+            padding: 8px;
+            margin: 5px 0;
+            background: #e0e0e0;
+            display: none;
+        }
+        .search-result.visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. EVENT.TARGET -->
+     <section>
+        <h2>1. event.target - Which Element Was Clicked?</h2>
+        <button class="product-btn" id="laptop">Laptop</button>
+        <button class="product-btn" id="mouse">Mouse</button>
+        <button class="product-btn" id="keyboard">Keyboard</button>
+        <button class="product-btn" id="monitor">Monitor</button>
+        <div id="output">Click a product button</div>
+     </section>
+
+     <!-- 2. EVENT.PREVENTDEFAULT -->
+      <section>
+        <h2>2. event.preventDefault() - Control Form Submission</h2>
+        <form id="productForm">
+            <input type="text" id="productName" placeholder="Product Name">
+            <input type="number" id="productPrice" placeholder="Price (₱)">
+            <button type="submit">Add Product</button>
+        </form>
+        <div id="formOutput"></div>
+      </section>
+
+      <!-- 3. EVENT DELEGATION -->
+       <section>
+        <h2>3. Event Delegation - One Listener, Many Elements</h2>
+        <div id="cartContainer">
+            <div class="cart-item">
+                <span>Mouse - ₱599</span>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <div class="cart-item">
+                <span>Keyboard - ₱2999</span>
+                <button class="remove-btn">Remove</button>
+            </div>
+        </div>
+        <button id="addItemBtn">Add Random Item</button>
+       </section>
+
+       <!-- 4. KEYBOARD EVENTS -->
+        <section>
+            <h2>4. Keyboard Events - Search as You Type</h2>
+            <input type="text" id="productSearch" placeholder="Search products (type 'key', 'mouse', etc)...">
+            <div class="search-result" data-product="Laptop">Laptop</div>
+            <div class="search-result" data-product="Mouse">Mouse</div>
+            <div class="search-result" data-product="Keyboard">Keyboard</div>
+            <div class="search-result" data-product="Monitor">Monitor</div>
+        </section>
+
+    <script src="02-event-handling.js"></script>
+</body>
+</html>
