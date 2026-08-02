@@ -14,3 +14,30 @@
 // Test: Click button, see loading message, then see 5 products appear
 // Log how many products were rendered
 // Hint: Use .forEach() to loop through data. Use document.createElement() and .appendChild() to add to DOM. Clear the container with .innerHTML = "" before adding new items.
+
+const loadProducts = document.getElementById("loadProducts");
+const result = document.getElementById("result");
+
+loadProducts.addEventListener("click", () => {
+  result.innerHTML = `<p class='loading'>Loading products...</p>`;
+
+  fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
+    .then((response) => response.json())
+    .then((data) => {
+      result.innerHTML = "";
+
+      data.forEach((product) => {
+        const div = document.createElement("div");
+        div.className = "products";
+        div.innerHTML = `
+            <strong>ID:</strong> ${product.id}<br>
+            <strong>Title:</strong> ${product.title.slice(0, 50)}
+        `;
+        result.appendChild(div);
+      });
+      console.log("Result:",data.length);
+    })
+    .catch(error => {
+        result.innerHTML = `<p class='error'>Error: ${error.message}</p>`;
+    })
+});
