@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async & Fetching - Phase 3.1</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 800px;
+            padding: 20px;
+            margin: 40px auto;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .loading {
+            color: blue;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        .product {
+            padding: 10px;
+            background: #f0f0f0;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        #productList {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Async & Fetching Example</h1>
+
+    <!-- 1. SIMPLE FETCH -->
+    <section>
+        <h2>1. Simple Fetch (GET Request)</h2>
+        <button id="fetchBtn">Fetch Products</button>
+        <div id="output1"></div>
+    </section>
+
+    <!-- 2. FETCH WITH ERROR HANDLING -->
+    <section>
+        <h2>2. Fetch with Error Handling</h2>
+        <button id="fetchWithErrorBtn">Fetch with Error Check</button>
+        <div id="output2"></div>
+    </section>
+
+    <!-- 3. FETCH AND RENDER TO DOM -->
+    <section>
+        <h2>3. Fetch & Render Products to DOM</h2>
+        <button id="loadProductsBtn">Load Products</button>
+        <div id="productList"></div>
+    </section>
+
+    <!-- 4. SIMULATING DELAYED RESPONSE (setTimeout) -->
+    <section>
+        <h2>4. Simulating Server Delay</h2>
+        <button id="delayedFetchBtn">Fetch (with 2 sec delay)</button>
+        <div id="output4"></div>
+    </section>
+
+    <script src="03-async-fetching.js"></script>
+</body>
+</html>
