@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async/await - Phase 3.2</title>
+    <style>
+        body { font-family: Arial; max-width: 800px; margin: 40px auto; padding: 20px; }
+        button { padding: 10px 15px; margin: 5px; cursor: pointer; }
+        .loading { color: blue; font-weight: bold; }
+        .error { color: red; font-weight: bold; }
+        .success { color: green; font-weight: bold; }
+        .product { padding: 10px; background: #f0f0f0; margin: 10px 0; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>async/await - Phase 3.2</h1>
+
+    <!-- 1. SIMPLE ASYNC/AWAIT -->
+    <section>
+        <h2>1. Simple async/await (Compare with .then())</h2>
+        <button id="simpleBtn">Fetch with async/await</button>
+        <div id="output1"></div>
+    </section>
+
+    <!-- 2. ASYNC/AWAIT WITH TRY/CATCH -->
+    <section>
+        <h2>2. async/await with Error Handling (try/catch)</h2>
+        <button id="errorBtn">Fetch Invalid URL</button>
+        <div id="output2"></div>
+    </section>
+
+    <!-- 3. MULTIPLE ASYNC OPERATIONS -->
+    <section>
+        <h2>3. Multiple Fetches in Sequence</h2>
+        <button id="multipleBtn">Fetch User + Products</button>
+        <div id="output3"></div>
+    </section>
+
+    <!-- 4. ASYNC WITH LOADING STATE -->
+    <section>
+        <h2>4. async/await with Loading State</h2>
+        <button id="loadingBtn">Load Products</button>
+        <div id="output4"></div>
+    </section>
+
+    <script src="02-async-await.js"></script>
+</body>
+</html>
