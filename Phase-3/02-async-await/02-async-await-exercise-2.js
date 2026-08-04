@@ -12,3 +12,29 @@
 // Log error to console
 
 // Hint: Use try { ... } catch (error) { ... } pattern. Check response.ok before calling .json().
+
+const fetchWithError = document.getElementById("fetchWithError");
+const output = document.getElementById("output");
+
+fetchWithError.addEventListener("click", async () => {
+    output.className = "loading";
+    output.textContent = "Loading...";
+
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/invalid-post");
+        if (!response.ok) {
+            throw new Error(`HTTP Status error: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        // Display
+        output.className = "success";
+        output.textContent = `Success: ${JSON.stringify(data)}`;
+
+    } catch(error) {
+        output.className = "error";
+        output.textContent = `Error: ${error.message}`;
+        console.log("Error:", error);
+    }
+});
