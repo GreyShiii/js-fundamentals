@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Management - Phase 4</title>
+    <style>
+        body { font-family: Arial; max-width: 1000px; margin: 40px auto; padding: 20px; }
+        button { padding: 10px 15px; margin: 5px; cursor: pointer; }
+        .category-btn { background: #007bff; color: white; }
+        .category-btn.active { background: #0056b3; font-weight: bold; }
+        .product { padding: 15px; background: #f9f9f9; margin: 10px 0; border-radius: 4px; display: flex; justify-content: space-between; }
+        .cart-item { padding: 10px; background: #e7f3ff; margin: 5px 0; border-radius: 4px; }
+        .error { color: red; }
+        .loading { color: blue; }
+        #cart { background: #f0f0f0; padding: 15px; border-radius: 4px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>State Management Example - Phase 4</h1>
+
+    <!-- 1. SIMPLE STATE & RENDER -->
+    <section>
+        <h2>1. Simple State Management (Counter)</h2>
+        <p>Count: <span id="count">0</span></p>
+        <button id="incrementBtn">+1</button>
+        <button id="decrementBtn">-1</button>
+        <button id="resetBtn">Reset</button>
+    </section>
+
+    <!-- 2. SHOPPING CART STATE -->
+    <section>
+        <h2>2. Shopping Cart with State</h2>
+        
+        <div>
+            <h3>Categories:</h3>
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="Electronics">Electronics</button>
+            <button class="category-btn" data-category="Furniture">Furniture</button>
+        </div>
+
+        <div>
+            <h3>Products:</h3>
+            <div id="productList"></div>
+        </div>
+
+        <div id="cart">
+            <h3>Shopping Cart (<span id="cartCount">0</span> items)</h3>
+            <div id="cartItems"></div>
+            <p><strong>Total: ₱<span id="cartTotal">0</span></strong></p>
+        </div>
+    </section>
+
+    <script>
+</script>
+<script src="01-state-management.js"></script>
+</body>
+</html>
+
