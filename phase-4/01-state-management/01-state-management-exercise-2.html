@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+        }
+        .category-btn {
+            background-color: #007bff;
+            padding: 10px 15px;
+        }
+        .category-btn.active {
+            background-color: #0056b3;
+        }
+        .products {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <button class="category-btn active"  data-category="all">All</button>
+    <button class="category-btn" data-category="Electronics">Electronics</button>
+    <button class="category-btn" data-category="Furniture">Furniture</button>
+    <div id="productDisplay">
+        <h3>Products</h3>
+    </div>
+
+    <script src="01-state-management-exercise-2.js"></script>
+</body>
+</html>
